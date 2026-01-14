@@ -80,29 +80,36 @@ export default function Community() {
         return () => ctx.revert()
     }, [])
 
+    const testimonials = [
+        '"I pay my bills and manage daily expenses directly with crypto now."',
+        '"I travel frequently and Wave Money works everywhere I go."',
+        '"I didn\'t expect to use crypto for bills, but Wave Money made it easy."',
+        '"We tested crypto payments before. This is the first time it felt practical"',
+    ]
+
     return (
         <section
             ref={containerRef}
             id="how-it-works"
-            className="relative overflow-hidden bg-[#FFFEFB] pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-0"
+            className="relative overflow-hidden bg-[#FFFEFB] pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-0"
         >
-            <div className="max-w-[1440px] mx-auto px-6 lg:px-16 xl:px-24">
-                
-                <div className="text-center mb-16 lg:mb-20">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-20">
+                {/* Heading */}
+                <div className="text-center mb-12 sm:mb-14 md:mb-16 lg:mb-20">
                     <h2
                         ref={headingRef}
-                        className="font-normal text-[32px] md:text-[48px] xl:text-[56px] tracking-tight leading-[1.1] text-[#2B2B2B] font-sf-pro"
+                        className="font-normal text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[56px] tracking-tight leading-[1.15] text-[#2B2B2B] font-sf-pro px-4"
                     >
                         Hear from Our Community
                     </h2>
                 </div>
 
-              
-                <div className="relative max-w-[1200px] mx-auto hidden lg:block pb-20">
-                   
+                {/* Desktop Layout (lg and above) */}
+                <div className="relative max-w-[1200px] mx-auto hidden lg:block pb-20 min-h-[800px]">
+                    {/* Center Phone */}
                     <div
                         ref={phoneRef}
-                        className="relative z-20 w-[380px] mx-auto"
+                        className="relative z-20 w-[340px] xl:w-[380px] mx-auto"
                     >
                         <Image
                             src="/assets/img/mobilemockup.png"
@@ -114,70 +121,106 @@ export default function Community() {
                         />
                     </div>
 
-                    
+                    {/* Top Left Card */}
                     <div
                         ref={cardTopLeftRef}
-                        className="hidden lg:block absolute left-[6%] top-[23%]
-                        w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
-                        rounded-[20px] px-6 py-6 text-[#546E3A] text-[20px] leading-[1.4] text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-10"
+                        className="absolute left-0 xl:left-[4%] top-[18%] xl:top-[20%]
+                        w-[320px] xl:w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
+                        rounded-[18px] xl:rounded-[20px] px-5 xl:px-6 py-5 xl:py-6 
+                        text-[#546E3A] text-[17px] xl:text-[20px] leading-[1.5] xl:leading-[1.4] 
+                        text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-10"
                     >
-                        “I pay my bills and manage daily expenses directly with crypto now.”
+                        {testimonials[0]}
                     </div>
 
+                    {/* Bottom Left Card */}
                     <div
                         ref={cardBottomLeftRef}
-                        className="hidden lg:block absolute left-[9%] bottom-[16%]
-                        w-[380px] bg-[#FFFFFF] border-2 border-[#9FE870]
-                        rounded-[20px] px-6 py-6 text-[#546E3A] text-[20px] leading-[1.4] text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-30"
+                        className="absolute left-[2%] xl:left-[6%] bottom-[14%] xl:bottom-[16%]
+                        w-[340px] xl:w-[380px] bg-[#FFFFFF] border-2 border-[#9FE870]
+                        rounded-[18px] xl:rounded-[20px] px-5 xl:px-6 py-5 xl:py-6 
+                        text-[#546E3A] text-[17px] xl:text-[20px] leading-[1.5] xl:leading-[1.4] 
+                        text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-30"
                     >
-                        “I didn’t expect to use crypto for bills, but Wave Money made it easy.”
+                        {testimonials[2]}
                     </div>
 
-                    
+                    {/* Top Right Card */}
                     <div
                         ref={cardTopRightRef}
-                        className="hidden lg:block absolute right-[6%] top-[21%]
-                        w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
-                        rounded-[20px] px-6 py-6 text-[#546E3A] text-[20px] leading-[1.4] text-left
-                        shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-30"
+                        className="absolute right-0 xl:right-[4%] top-[16%] xl:top-[18%]
+                        w-[320px] xl:w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
+                        rounded-[18px] xl:rounded-[20px] px-5 xl:px-6 py-5 xl:py-6 
+                        text-[#546E3A] text-[17px] xl:text-[20px] leading-[1.5] xl:leading-[1.4] 
+                        text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-30"
                     >
-                        “I travel frequently and Wave Money works everywhere I go.”
+                        {testimonials[1]}
                     </div>
 
+                    {/* Bottom Right Card */}
                     <div
                         ref={cardBottomRightRef}
-                        className="hidden lg:block absolute right-[6%] bottom-[30%]
-                        w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
-                        rounded-[20px] px-6 py-6 text-[#546E3A] text-[20px] leading-[1.4] text-left
-                        shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-10"
+                        className="absolute right-0 xl:right-[4%] bottom-[28%] xl:bottom-[30%]
+                        w-[320px] xl:w-[360px] bg-[#FFFFFF] border-2 border-[#9FE870]
+                        rounded-[18px] xl:rounded-[20px] px-5 xl:px-6 py-5 xl:py-6 
+                        text-[#546E3A] text-[17px] xl:text-[20px] leading-[1.5] xl:leading-[1.4] 
+                        text-left shadow-[0_8px_24px_rgba(0,0,0,0.08)] z-10"
                     >
-                        We tested crypto payments before. This is the first time it felt practical
+                        {testimonials[3]}
                     </div>
                 </div>
 
-               
-                <div className="lg:hidden flex flex-col items-center pb-8">
-                    <div className="w-[280px] sm:w-[320px] mb-12">
+                {/* Tablet Layout (md to lg) */}
+                <div className="hidden md:flex lg:hidden flex-col items-center pb-12 gap-8">
+                    {/* Phone */}
+                    <div className="w-[300px] mb-4">
                         <Image
                             src="/assets/img/mobilemockup.png"
                             alt="Wave Money App"
-                            width={320}
-                            height={640}
+                            width={300}
+                            height={600}
+                            priority
                             className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
                         />
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[700px]">
-                        {[
-                            '“I pay my bills and manage daily expenses directly with crypto now.”',
-                            '“I travel frequently and Wave Money works everywhere I go.”',
-                            '“I didn’t expect to use crypto for bills, but Wave Money made it easy.”',
-                            'We tested crypto payments before. This is the first time it felt practical',
-                        ].map((text, idx) => (
+                    {/* Cards in 2x2 Grid */}
+                    <div className="grid grid-cols-2 gap-4 max-w-[700px] w-full px-4">
+                        {testimonials.map((text, idx) => (
                             <div
                                 key={idx}
-                                className="bg-[#FFFEFB] border-2 border-[#9FE870] rounded-[18px] px-6 py-6
-                                text-[#4A4A4A] text-[15px] leading-[1.6] shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                                className="bg-[#FFFFFF] border-2 border-[#9FE870] rounded-[16px] 
+                                px-5 py-5 text-[#546E3A] text-[15px] leading-[1.5] 
+                                shadow-[0_8px_24px_rgba(0,0,0,0.08)] text-left"
+                            >
+                                {text}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Mobile Layout (below md) */}
+                <div className="md:hidden flex flex-col items-center pb-8 gap-6">
+                    {/* Phone */}
+                    <div className="w-[260px] sm:w-[300px] mb-4">
+                        <Image
+                            src="/assets/img/mobilemockup.png"
+                            alt="Wave Money App"
+                            width={300}
+                            height={600}
+                            priority
+                            className="w-full h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)]"
+                        />
+                    </div>
+
+                    {/* Cards Stacked */}
+                    <div className="flex flex-col gap-4 w-full max-w-[400px] px-4">
+                        {testimonials.map((text, idx) => (
+                            <div
+                                key={idx}
+                                className="bg-[#FFFFFF] border-2 border-[#9FE870] rounded-[16px] 
+                                px-5 py-5 text-[#546E3A] text-[14px] sm:text-[15px] leading-[1.6] 
+                                shadow-[0_8px_24px_rgba(0,0,0,0.08)] text-left"
                             >
                                 {text}
                             </div>
@@ -185,7 +228,9 @@ export default function Community() {
                     </div>
                 </div>
             </div>
-            <div className="relative w-full z-0 pointer-events-none mt-0 md:mt-[119px]">
+
+            {/* Background Wave */}
+            <div className="relative w-full z-0 pointer-events-none mt-8 sm:mt-12 md:mt-16 lg:mt-20">
                 <img
                     src="/assets/img/faqbg.png"
                     alt="Background Wave"
@@ -193,6 +238,5 @@ export default function Community() {
                 />
             </div>
         </section>
-        
     )
 }
