@@ -142,7 +142,7 @@ export default function Footer() {
             <Link href="https://x.com/thewavemoney" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
               <Twitter />
             </Link>
-            <Link href="https://www.instagram.com/thewavemoneyofficial/" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
+           <Link href="https://www.instagram.com/thewavemoney1?igsh=MTBobGlxNGpxNTdtOQ==" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
               <Instagram />
             </Link>
           </div>
