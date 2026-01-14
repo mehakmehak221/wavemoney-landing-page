@@ -211,7 +211,7 @@ export default function Features() {
                 <div className='flex justify-center mb-16'>
                     <h2
                         ref={headingRef}
-                        className='font-normal text-[28px] xs:text-[32px] sm:text-[40px] md:text-[64px] lg:text-[64px] xl:text-[64px] leading-[1.1] font-semibold mb-6 font-inter text-white text-center tracking-tight'
+                        className='font-normal text-[28px] xs:text-[32px] sm:text-[40px] md:text-[64px] lg:text-[64px] xl:text-[90px] leading-[1.1] font-semibold mb-6 font-inter text-white text-center tracking-tight'
                         style={{
                             textShadow: '0 0 20px rgba(255,255,255,0.3)',
                         }}
