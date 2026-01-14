@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.onewave.money",
+      "sha256_cert_fingerprints": [
+        "54:AF:01:A7:09:2E:3C:C8:CF:1B:4E:19:F0:3D:14:7D:F5:C7:CD:EB:B7:9B:49:5A:C0:00:11:75:38:18:23:4B"
+      ]
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "JFRUWGVRSA.com.wavemoney.app",
+        "paths": ["/referral*"]
+      }
+    ]
+  }
+}
