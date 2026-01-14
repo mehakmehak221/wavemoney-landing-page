@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { Linkedin, telegram as Telegram, twitter as Twitter, instagram as Instagram, Facebook, Youtube } from "../../../VectorImages";
+import { Linkedin, telegram as Telegram, twitter as Twitter, instagram as Instagram, Facebook, Youtube, Phone } from "../../../VectorImages";
 import { scrollToSection } from "../../../utils/scrollUtils";
 
 export default function Footer() {
@@ -124,7 +124,18 @@ export default function Footer() {
                     EMAIL
                   </Link>
                 </li>
+                <li>
+                  <Link href="mailto:support@wavemoney.app" className="text-white font-inter hover:text-white/80 text-[16px] font-medium transition-colors cursor-none uppercase">
+                    SUPPORT
+                  </Link>
+                </li>
+                <li>
+                  <span className="text-white font-inter text-[16px] font-medium uppercase">
+                    Fairmount Dubai
+                  </span>
+                </li>
               </ul>
+
             </div>
           </div>
         </div>
@@ -142,8 +153,11 @@ export default function Footer() {
             <Link href="https://x.com/thewavemoney" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
               <Twitter />
             </Link>
-           <Link href="https://www.instagram.com/thewavemoney1?igsh=MTBobGlxNGpxNTdtOQ==" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
+            <Link href="https://www.instagram.com/thewavemoney1?igsh=MTBobGlxNGpxNTdtOQ==" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
               <Instagram />
+            </Link>
+            <Link href="tel:+971542954611" className="w-10 h-10 border border-white rounded-[4px] flex items-center justify-center hover:border-white transition-colors">
+              <Phone />
             </Link>
           </div>
         </div>
