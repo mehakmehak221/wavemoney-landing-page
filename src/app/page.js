@@ -53,9 +53,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <UsingWave />
       <Space />
       <Utility />
-      <UsingWave />
+
       <CryptoSection />
       <SafeTrusted />
       <Offering />
