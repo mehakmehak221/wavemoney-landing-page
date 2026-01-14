@@ -211,7 +211,7 @@ export default function UsingWave() {
                             className='flex-1 max-w-[180px] md:max-w-[240px]'
                         >
                             <p className='text-[13px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.5] text-left text-[#40570F] font-inter'>
-                                Convert crypto to fiat and fund your wallet via UPI, card, or bank transfers
+                                Convert crypto to fiat and fund your wallet via card or bank transfers
                             </p>
                         </div>
                         <div
@@ -316,7 +316,7 @@ export default function UsingWave() {
                                     ref={leftCardTextRef}
                                     className='text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.5] text-left  text-[#40570F] font-inter'
                                 >
-                                    Convert crypto to fiat and fund your wallet via UPI, card, or bank transfers
+                                    Convert crypto to fiat and fund your wallet via card or bank transfers
                                 </p>
                             </div>
                             <div
