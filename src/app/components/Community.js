@@ -117,7 +117,7 @@ export default function Community() {
                             width={400}
                             height={760}
                             priority
-                            className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
+                            className="w-full h-auto "
                         />
                     </div>
 
