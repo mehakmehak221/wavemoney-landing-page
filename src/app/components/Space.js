@@ -55,7 +55,7 @@ export default function Space() {
                     ease: 'elastic.out(1, 0.75)'
                 }, '-=0.8')
 
-            // Subtle Floating Animation for Shield
+
             gsap.to(shieldContainerRef.current, {
                 y: -15,
                 duration: 3,
@@ -76,7 +76,7 @@ export default function Space() {
                     <div ref={textContentRef} className='w-full lg:w-1/2 text-center lg:text-left'>
                         <h1
                             ref={headingRef}
-                            className='text-4xl xs:text-[42px] sm:text-5xl md:text-6xl font-medium leading-tight text-[#191C1F] tracking-tight'
+                            className='text-4xl xs:text-[28px] sm:text-5xl md:text-6xl font-medium leading-tight text-[#191C1F] tracking-tight'
                         >
                             Your Money's Safe
                             <br className='hidden xs:block' />
@@ -101,7 +101,7 @@ export default function Space() {
                             <img
                                 src="/assets/img/shield.png"
                                 alt="Security Shield"
-                                className="w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
+                                className="w-full h-auto "
                                 loading="lazy"
                             />
                         </div>

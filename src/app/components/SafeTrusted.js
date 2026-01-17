@@ -179,7 +179,7 @@ export default function SafeTrusted() {
 
   return (
     <div ref={containerRef} className="relative bg-[#FFFEFB] overflow-hidden" id="payment">
-      <div className="max-w-[1440px] w-full mx-auto relative z-10 py-12 md:py-12 px-4 md:px-6 lg:px-[180px]">
+      <div className="max-w-[1440px] w-full mx-auto relative z-10 py-12 md:py-12 px-6 md:px-6 lg:px-[180px]">
         <div className="text-center mb-10 md:mb-16">
           <h1 ref={headingRef} className="font-normal text-4xl md:text-[48px] lg:text-[60px] leading-[1.1] text-[#1F2937] mb-6 md:mb-8 font-sf-pro">
             Built For

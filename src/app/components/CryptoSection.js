@@ -47,10 +47,16 @@ const CryptoSection = () => {
   }
 
   const floatingAnimation = {
-    y: [0, -25, 0],
-    rotate: [-1, 1, -1],
+    y: [0, -30, 0],
+    rotate: [0, 3, -3, 0],
+    scale: [1, 1.03, 1],
+    filter: [
+      'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))',
+      'drop-shadow(0px 40px 60px rgba(0,0,0,0.3))',
+      'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))'
+    ],
     transition: {
-      duration: 6,
+      duration: 7,
       repeat: Infinity,
       ease: 'easeInOut',
     },
@@ -80,7 +86,7 @@ const CryptoSection = () => {
 
             <motion.h2
               variants={fadeUp}
-              className="text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[48px] leading-[1.2] font-semibold mb-6 font-inter"
+              className="text-[28px] xs:text-[28px] sm:text-[28px] md:text-[32px] lg:text-[48px] leading-[1.2] font-semibold mb-6 font-inter"
             >
               Global Payouts
               <br />
@@ -103,7 +109,12 @@ const CryptoSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={imageEntry}
           >
-            <motion.div animate={floatingAnimation} className="w-full flex justify-center lg:justify-end">
+            <motion.div
+              animate={floatingAnimation}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex justify-center lg:justify-end"
+            >
               <Image
                 src="/assets/img/globalpayout.png"
                 alt="Global Payouts"

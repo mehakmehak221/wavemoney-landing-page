@@ -156,12 +156,12 @@ export default function Utility() {
         >
             <div className='max-w-[1440px] w-full mx-auto relative px-4 md:px-6 lg:px-10 xxl:px-20'>
 
-                {/* Mobile Layout - Creative Redesign */}
+
                 <div className='md:hidden flex flex-col items-center mb-16 pt-8'>
 
-                    {/* Floating Cards Cluster */}
-                    <div className='relative w-full max-w-[340px] h-[260px] mb-8'>
-                        {/* Middle Card (Index 1) - Top Center */}
+
+                    <div className='relative w-full max-w-[400px] h-[260px] mb-8'>
+
                         <div
                             ref={(el) => (cardsRef.current[4] = el)}
                             className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] z-30 shadow-[0_20px_40px_rgba(0,0,0,0.12)] rounded-[20px] overflow-hidden"
@@ -175,7 +175,7 @@ export default function Utility() {
                             />
                         </div>
 
-                        {/* Left Card (Index 0) */}
+
                         <div
                             ref={(el) => (cardsRef.current[3] = el)}
                             className="absolute bottom-0 left-0 w-[110px] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden"
@@ -189,7 +189,7 @@ export default function Utility() {
                             />
                         </div>
 
-                        {/* Right Card (Index 2) */}
+
                         <div
                             ref={(el) => (cardsRef.current[5] = el)}
                             className="absolute bottom-0 right-0 w-[110px] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.08)] rounded-[20px] overflow-hidden"
@@ -204,7 +204,7 @@ export default function Utility() {
                         </div>
                     </div>
 
-                    {/* Mobile Heading - Below Cards */}
+
                     <div ref={headingMobileRef} className='max-w-[90%] text-center relative z-20'>
                         <h2 className='font-normal text-[28px] xs:text-[32px] leading-[1.2] text-[#5B5141] bg-gradient-to-b from-[#452508] via-[#666666] to-[#564637] bg-clip-text text-transparent'>
                             A global digital wallet and payment ecosystem that connects crypto and real-world utility into one app.
@@ -212,7 +212,7 @@ export default function Utility() {
                     </div>
                 </div>
 
-                {/* Desktop/Tablet Layout (Floating Cards) */}
+
                 <div className='relative w-full h-[450px] sm:h-[480px] md:h-[500px] xl:h-[550px] max-w-[1400px] mx-auto mt-2 hidden md:block'>
 
 
