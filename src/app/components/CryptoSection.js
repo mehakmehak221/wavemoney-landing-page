@@ -50,11 +50,11 @@ const CryptoSection = () => {
     y: [0, -30, 0],
     rotate: [0, 3, -3, 0],
     scale: [1, 1.03, 1],
-    filter: [
-      'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))',
-      'drop-shadow(0px 40px 60px rgba(0,0,0,0.3))',
-      'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))'
-    ],
+    // filter: [
+    //   'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))',
+    //   'drop-shadow(0px 40px 60px rgba(0,0,0,0.3))',
+    //   'drop-shadow(0px 15px 30px rgba(0,0,0,0.15))'
+    // ],
     transition: {
       duration: 7,
       repeat: Infinity,

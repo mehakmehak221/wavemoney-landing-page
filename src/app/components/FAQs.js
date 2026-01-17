@@ -14,34 +14,36 @@ export default function FAQs() {
 
     const faqData = [
         {
-            question: "Is Wave Money safe to use for payments and bookings?",
-            answer:
-                "Yes. You can convert supported crypto to fiat using our Crypto to Fiat Conversion feature, with instant settlement to your linked account or card.",
+            question: "Is Wave Money secure?",
+            answer: "Yes. Wave Money follows industry-standard security practices, including data encryption, secure infrastructure, and user verification processes to help protect accounts and transactions.",
         },
         {
-            question: "Which cryptocurrencies can I use on Wave Money?",
-            answer:
-                "Supported cryptocurrencies depend on current integrations. Check the latest list in your dashboard.",
+            question: "How do I convert crypto to USD?",
+            answer: "You can convert supported crypto currencies to USD directly within the Wave Money platform. The process is straightforward and designed to be transparent, with rates shown before confirmation.",
         },
         {
-            question: "Can I convert crypto to INR or other fiat currencies?",
-            answer: "Conversion depends on supported payment options in your wallet.",
+            question: "How fast are transactions processed?",
+            answer: "Most transactions are processed within minutes. Processing time may vary depending on blockchain network activity, payment method, and compliance checks.",
         },
         {
-            question: "How do I pay for a bill or booking using crypto?",
-            answer: "Use the wallet's payment interface after converting to fiat.",
+            question: "Can I open an account if I don't own crypto?",
+            answer: "Yes. You can open a Wave Money account without owning any crypto. The platform supports fiat onboarding, allowing you to get started with traditional currency.",
         },
         {
-            question: "Is the Arbitrage Bot risky?",
-            answer: "All bots carry risk; use with caution and proper understanding.",
+            question: "What happens if I lose my phone?",
+            answer: "Your funds remain secure. You can regain access to your account through identity verification and by contacting Wave Money support for account recovery.",
         },
         {
-            question: "What is Wave AI Calling used for?",
-            answer: "AI-powered communication to automate interactions and support.",
+            question: "Do you accept cash payments?",
+            answer: "No. Wave Money does not accept cash payments. All transactions are handled digitally through supported payment methods.",
         },
         {
-            question: "Can I use Wave Money internationally?",
-            answer: "Yes, subject to supported countries and compliance regulations.",
+            question: "Will the account be under my name?",
+            answer: "Yes. All accounts are registered under the user's verified legal name to meet compliance and security requirements.",
+        },
+        {
+            question: "What if I face any difficulties, can you help me?",
+            answer: "Yes. Wave Money provides customer support to assist with technical issues, account questions, and general inquiries.",
         },
     ];
 
