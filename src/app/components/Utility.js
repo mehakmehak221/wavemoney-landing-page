@@ -164,7 +164,7 @@ export default function Utility() {
 
                         <div
                             ref={(el) => (cardsRef.current[4] = el)}
-                            className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] z-30 shadow-[0_20px_40px_rgba(0,0,0,0.12)] rounded-[20px] overflow-hidden"
+                            className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] z-10 shadow-[0_20px_40px_rgba(0,0,0,0.12)] rounded-[20px] overflow-hidden"
                         >
                             <Image
                                 src={data[1].icon}
