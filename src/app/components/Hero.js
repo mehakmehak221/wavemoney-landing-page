@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import heroImg from '../../../public/assets/img/hero.png'
+import heroMobileImg from '../../../public/assets/img/heromobilebg.png'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -68,18 +69,27 @@ export default function Hero() {
     return (
         <div
             ref={heroRef}
-            className="relative w-full min-h-screen flex items-center overflow-hidden"
+            className="relative w-full h-[1712px] md:h-auto md:min-h-screen flex items-center overflow-hidden"
             id="personal"
         >
 
-            <div ref={imageRef} className="absolute inset-0 w-full h-full">
+            <div ref={imageRef} className="absolute inset-0 w-full h-full ">
                 <Image
                     src={heroImg}
                     alt="Hero Background"
                     fill
                     priority
                     quality={90}
-                    className="object-cover"
+                    className="object-cover hidden md:block"
+                    sizes="100vw"
+                />
+                <Image
+                    src={heroMobileImg}
+                    alt="Hero Background Mobile"
+                    fill
+                    priority
+                    quality={90}
+                    className="object-cover object-center md:hidden"
                     sizes="100vw"
                 />
             </div>
@@ -95,7 +105,7 @@ export default function Hero() {
                         flex
                         items-center
                         min-h-[500px] md:min-h-[600px] lg:min-h-screen
-                        pt-[80px] pb-[80px]
+                        pt-[300px] sm:pt-[80px] pb-[80px] text-left align-center
                     "
                 >
                     <div
@@ -111,16 +121,16 @@ export default function Hero() {
                         "
                     >
                         <div ref={headingRef}>
-                            <h1 className="text-[28px] xs:text-[32px] sm:text-[36px] md:text-[43px] lg:text-[50px] font-medium leading-[1.2] md:leading-[1.3] font-sf-pro tracking-[-0.02em]">
-                                Use Crypto In Everyday Life.
-                                <br />
-                                Pay Bills and Spend Anywhere
+                            <h1 className="text-[32px] sm:text-[36px] md:text-[43px] lg:text-[50px] font-medium leading-[1.3] font-sf-pro tracking-[-0.02em]">
+                                <span className="sm:hidden">Use Crypto In<br />Everyday Life.<br />Pay Bills and Spend<br />Anywhere</span>
+                                <span className="hidden sm:inline">Use Crypto In Everyday Life.<br />Pay Bills and Spend Anywhere</span>
                             </h1>
                         </div>
 
                         <div ref={paragraphRef}>
-                            <p className="text-[16px] sm:text-[20px] md:text-[24px] lg:text-[30px] font-sf-pro font-normal leading-[1.5] max-w-[640px] text-white/90">
-                                Wave Money Connects Your Crypto To Real World Payments, Instantly And Securely
+                            <p className="text-[20px] sm:text-[20px] md:text-[24px] lg:text-[30px] font-sf-pro font-normal  sm:not-italic leading-[1.6] max-w-[640px] text-white/80 sm:text-white/90">
+                                <span className="sm:hidden">Wave Money Connects Your Crypto<br />To Real World Payments, Instantly<br />And Securely</span>
+                                <span className="hidden sm:inline">Wave Money Connects Your Crypto To Real World Payments, Instantly And Securely</span>
                             </p>
                         </div>
 
