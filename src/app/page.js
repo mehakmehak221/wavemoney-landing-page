@@ -56,10 +56,9 @@ export default function Home() {
       <UsingWave />
       <Space />
       <Utility />
-
       <CryptoSection />
       <SafeTrusted />
-      <Offering />
+      {/* <Offering /> */}
       {/* <Bot /> */}
       <Features />
       <WaveCards />

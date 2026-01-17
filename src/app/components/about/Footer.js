@@ -46,7 +46,7 @@ export default function Footer() {
           CRYPTO PAYMENTS MADE SIMPLE
         </h3>
         <p className="text-white/80 font-inter text-[16px] font-normal ml-3">
-          Wave Money Helps You Convert Crypto To Fiat, Pay Bills, Send Money Globally, And Spend Anywhere — Securely And Instantly.
+          Wave Money helps you convert crypto to USD, pay bills, send money globally, and spend anywhere — securely and instantly.
         </p>
       </div>
       <div className="max-w-[1440px] w-full mx-auto">
@@ -119,18 +119,21 @@ export default function Footer() {
                 <h3 className="text-white font-inter text-[16px] font-medium tracking-wider uppercase">CONTACT</h3>
               </div>
               <ul className="space-y-5">
-                <li>
-                  <Link href="mailto:contact@wavemoney.com" className="text-white font-inter hover:text-white/80 text-[16px] font-medium transition-colors cursor-none uppercase">
-                    EMAIL
+                <li className="flex flex-col">
+                  <span className="text-white/60 font-inter text-[14px] font-normal mb-1">Email:</span>
+                  <Link href="mailto:contact@wavemoney.com" className="text-white font-inter hover:text-white/80 text-[16px] font-medium transition-colors cursor-none">
+                    contact@wavemoney.com
                   </Link>
                 </li>
-                <li>
-                  <Link href="mailto:support@wavemoney.app" className="text-white font-inter hover:text-white/80 text-[16px] font-medium transition-colors cursor-none uppercase">
-                    SUPPORT
+                <li className="flex flex-col">
+                  <span className="text-white/60 font-inter text-[14px] font-normal mb-1">Support:</span>
+                  <Link href="mailto:support@wavemoney.app" className="text-white font-inter hover:text-white/80 text-[16px] font-medium transition-colors cursor-none">
+                    support@wavemoney.app
                   </Link>
                 </li>
-                <li>
-                  <span className="text-white font-inter text-[16px] font-medium uppercase">
+                <li className="flex flex-col">
+                  <span className="text-white/60 font-inter text-[14px] font-normal mb-1">Location:</span>
+                  <span className="text-white font-inter text-[16px] font-medium">
                     Fairmount Dubai
                   </span>
                 </li>

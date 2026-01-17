@@ -10,8 +10,6 @@ import { rightcurl as RightCurl } from '@/VectorImages'
 gsap.registerPlugin(ScrollTrigger)
 
 export default function UsingWave() {
-    const [isDarkMode, setIsDarkMode] = useState(false)
-
     const containerRef = useRef(null)
     const leftCurlRef = useRef(null)
     const rightCurlRef = useRef(null)
@@ -24,10 +22,6 @@ export default function UsingWave() {
     const walletCard2Ref = useRef(null)
     const rightCardTextRef = useRef(null)
     const rightCardImageRef = useRef(null)
-
-    const toggleMockup = () => {
-        setIsDarkMode(!isDarkMode)
-    }
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -170,7 +164,7 @@ export default function UsingWave() {
     return (
         <div
             ref={containerRef}
-            className='relative py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden bg-[#FFFCF7]'
+            className='relative py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 overflow-hidden bg-[#FFFEFB]'
             id='how-it-works'
         >
             <div
@@ -190,67 +184,64 @@ export default function UsingWave() {
                 <div className='text-center mb-12 md:mb-16 lg:mb-24'>
                     <h2
                         ref={headingRef}
-                        className='font-semibold text-[32px] md:text-[48px] xl:text-[64px] tracking-tight leading-[1.1] text-[#2B2B2B]'
+                        className='font-semibold text-[32px] md:text-[48px] xl:text-[64px] tracking-tight leading-[1.1] text-[#2B2B2B] font-sf-pro'
                     >
-                        Wave Money App
+                        Wave Money
                     </h2>
                     <p
                         ref={subheadingRef}
-                        className='mt-3 md:mt-4 text-[18px] md:text-[32px] lg:text-[40px] font-medium text-[#2B2B2B]'
+                        className='mt-3 md:mt-4 text-[18px] md:text-[32px] lg:text-[40px] font-normal text-[#2B2B2B] font-sf-pro'
                     >
-                        The Future Of Everyday Payments
+                        Digital Money App
                     </p>
                 </div>
 
 
-                <div className='lg:hidden flex flex-col items-center gap-0 relative'>
+                <div className='lg:hidden flex flex-col items-center gap-12 relative'>
 
-                    <div className='flex flex-row items-center justify-between w-full max-w-[700px] px-4 md:px-10 mb-4 md:mb-0'>
-                        <div
-                            ref={leftCardTextRef}
-                            className='flex-1 max-w-[180px] md:max-w-[240px]'
-                        >
-                            <p className='text-[13px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.5] text-left text-[#40570F] font-inter'>
-                                Convert crypto to fiat and fund your wallet via card or bank transfers
-                            </p>
-                        </div>
+                    {/* Top Feature Block (Convert) */}
+                    <div className='flex flex-col items-center gap-4 text-center w-full px-4'>
                         <div
                             ref={leftCardImageRef}
-                            className='hover:scale-105 transition-transform duration-300 cursor-pointer flex-shrink-0'
+                            className='hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg rounded-2xl overflow-hidden'
                         >
                             <Image
                                 src='/assets/img/cryptopay.png'
                                 alt='Fund wallet'
-                                width={200}
-                                height={200}
-                                className='w-[120px] md:w-[160px] h-auto rounded-2xl shadow-xl'
+                                width={140}
+                                height={140}
+                                className='w-[140px] h-auto object-cover'
                             />
+                        </div>
+                        <div
+                            ref={leftCardTextRef}
+                            className='max-w-[280px]'
+                        >
+                            <p className='text-[15px] font-normal leading-[1.5] text-[#40570F] font-inter'>
+                                Convert crypto to USD and fund your wallet via card or bank transfers
+                            </p>
                         </div>
                     </div>
 
-
-                    <div className='flex justify-center items-center relative z-20 w-full -mt-4 md:-mt-8'>
+                    {/* Central Phone Mockup */}
+                    <div className='relative w-full flex justify-center py-6'>
                         <div
                             ref={centerMockupRef}
-                            className='relative w-[300px] md:w-[360px] cursor-pointer hover:scale-105 transition-transform duration-300'
-                            onClick={toggleMockup}
+                            className='relative w-[280px] xs:w-[320px] sm:w-[360px]'
                         >
-                            <div>
-                                <Image
-                                    src={isDarkMode ? '/assets/img/darkmobilemockup.png' : '/assets/img/mobilemockup.png'}
-                                    alt='App Mockup'
-                                    width={360}
-                                    height={720}
-                                    priority
-                                    className='w-full h-auto drop-shadow-2xl relative z-10'
-                                />
-                            </div>
+                            <Image
+                                src='/assets/img/mobilemockup.png'
+                                alt='App Mockup'
+                                width={360}
+                                height={720}
+                                priority
+                                className='w-full h-auto drop-shadow-2xl relative z-10'
+                            />
 
-
+                            {/* Floating Cards - Mobile Adjusted positions */}
                             <div
                                 ref={walletCard1Ref}
-                                className='absolute top-6 md:top-10 -right-8 md:-right-16 w-[130px] md:w-[170px] z-20'
-                                style={{ willChange: 'transform' }}
+                                className='absolute top-[10%] -right-4 w-[110px] xs:w-[130px] z-20'
                             >
                                 <Image
                                     src='/assets/img/wallet-card2.png'
@@ -261,11 +252,9 @@ export default function UsingWave() {
                                 />
                             </div>
 
-
                             <div
                                 ref={walletCard2Ref}
-                                className='absolute bottom-6 md:bottom-10 -left-8 md:-left-16 w-[140px] md:w-[190px] z-20'
-                                style={{ willChange: 'transform' }}
+                                className='absolute bottom-[10%] -left-4 w-[120px] xs:w-[140px] z-20'
                             >
                                 <Image
                                     src='/assets/img/wallet-card.png'
@@ -278,28 +267,26 @@ export default function UsingWave() {
                         </div>
                     </div>
 
-
-                    <div className='flex flex-row items-end justify-between w-full max-w-[700px] px-6 md:px-10 mt-8 md:mt-0'>
+                    {/* Bottom Feature Block (Send) */}
+                    <div className='flex flex-col items-center gap-4 text-center w-full px-4'>
                         <div
                             ref={rightCardImageRef}
-                            className='hover:scale-105 transition-transform duration-300 cursor-pointer flex-shrink-0'
+                            className='hover:scale-105 transition-transform duration-300 cursor-pointer shadow-lg rounded-2xl overflow-hidden'
                         >
                             <Image
                                 src='/assets/img/sendmoney.png'
                                 alt='Send Money'
-                                width={200}
-                                height={300}
-                                className='w-[130px] md:w-[160px] h-auto rounded-2xl shadow-xl'
+                                width={140}
+                                height={210}
+                                className='w-[140px] h-auto object-cover'
                             />
                         </div>
-                        <div className='flex-1 max-w-[200px] md:max-w-[240px] pb-8 md:pb-12 text-right'>
-                            <p
-                                ref={rightCardTextRef}
-                                className='text-[14px] md:text-[16px]
-                                lg:text-[18px] xl:text-[20px]
-                                font-normal leading-[1.5] text-right text-[#40570F] font-inter'
-                            >
-                                Send money globally in crypto or fiat
+                        <div
+                            ref={rightCardTextRef}
+                            className='max-w-[280px]'
+                        >
+                            <p className='text-[15px] font-normal leading-[1.5] text-[#40570F] font-inter'>
+                                Send money globally in crypto or USD
                             </p>
                         </div>
                     </div>
@@ -316,7 +303,7 @@ export default function UsingWave() {
                                     ref={leftCardTextRef}
                                     className='text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-normal leading-[1.5] text-left  text-[#40570F] font-inter'
                                 >
-                                    Convert crypto to fiat and fund your wallet via card or bank transfers
+                                    Convert crypto to USD and fund your wallet via card or bank transfers
                                 </p>
                             </div>
                             <div
@@ -338,12 +325,11 @@ export default function UsingWave() {
                     <div className='col-span-4 flex justify-center items-center relative z-20'>
                         <div
                             ref={centerMockupRef}
-                            className='relative w-[340px] xl:w-[360px] cursor-pointer hover:scale-105 transition-transform duration-300'
-                            onClick={toggleMockup}
+                            className='relative w-[340px] xl:w-[360px] hover:scale-105 transition-transform duration-300'
                         >
                             <div>
                                 <Image
-                                    src={isDarkMode ? '/assets/img/darkmobilemockup.png' : '/assets/img/mobilemockup.png'}
+                                    src='/assets/img/mobilemockup.png'
                                     alt='App Mockup'
                                     width={360}
                                     height={720}
@@ -389,7 +375,7 @@ export default function UsingWave() {
                                     ref={rightCardTextRef}
                                     className='text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-normal leading-[1.5] text-left text-[#40570F] font-inter'
                                 >
-                                    Send money globally in crypto or fiat
+                                    Send money globally in crypto or USD
                                 </p>
                             </div>
                             <div

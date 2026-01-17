@@ -179,7 +179,7 @@ export default function SafeTrusted() {
 
   return (
     <div ref={containerRef} className="relative bg-[#FFFEFB] overflow-hidden" id="payment">
-      <div className="max-w-[1440px] w-full mx-auto relative z-10 py-12 md:py-[119px] px-4 md:px-6 lg:px-[180px]">
+      <div className="max-w-[1440px] w-full mx-auto relative z-10 py-12 md:py-12 px-4 md:px-6 lg:px-[180px]">
         <div className="text-center mb-10 md:mb-16">
           <h1 ref={headingRef} className="font-normal text-4xl md:text-[48px] lg:text-[60px] leading-[1.1] text-[#1F2937] mb-6 md:mb-8 font-sf-pro">
             Built For
@@ -188,20 +188,20 @@ export default function SafeTrusted() {
           <div className="flex justify-center items-center gap-1 flex-wrap">
             <div
               ref={badge1Ref}
-              className="bg-[#405FD2] text-white px-5 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-lg font-medium flex items-center gap-2 font-sf-pro"
+              className="bg-[#405FD2] text-white px-5 md:px-8 py-2 md:py-3 rounded-md text-sm md:text-lg font-medium flex items-center gap-2 font-sf-pro"
             >
               <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full text-[#FFFFFF]"></span>
               Individuals
             </div>
             <span
               ref={ampersandRef}
-              className="bg-[#405FD2] text-white px-3 md:px-4 py-2 md:py-3 rounded-full font-medium text-sm md:text-base"
+              className="bg-[#405FD2] text-white px-6 rounded-full py-2 md:py-3 font-medium text-sm md:text-base"
             >
               &
             </span>
             <div
               ref={badge2Ref}
-              className="bg-[#405FD2] text-white px-5 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-lg font-medium flex items-center gap-2"
+              className="bg-[#405FD2] text-white px-5 md:px-8 py-2 md:py-3 rounded-md text-sm md:text-lg font-medium flex items-center gap-2"
             >
               <span className="font-inter w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full text-[#FFFFFF]"></span>
               Businesses

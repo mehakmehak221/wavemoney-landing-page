@@ -81,19 +81,19 @@ export default function Features() {
     const data = [
         {
             title: 'International Wallet',
-            content: 'We onboard users from 120+ countries whether you hold a passport or a residence permit we\'ve got you covered.'
+            content: 'We onboard users from 120+ countries whether you hold a passport or a residence permit, we’ve got youcovered.'
         },
         {
             title: 'Instant Conversions',
             content: 'Swap crypto and fiat in seconds with smart routing for the best rates. No hidden markups. No delays. Just seamless trading.'
         },
         {
-            title: 'Wave Physical & Digital Cards',
-            content: 'Spend your crypto like cash. Use Wave virtual cards online or tap-to-pay worldwide with the physical card powered by instant conversion.'
+            title: 'Wave Virtual Card',
+            content: 'Spend your crypto like cash. Use Wave virtual card online and pay worldwide powered by instant conversion.'
         },
         {
             title: 'Trusted Security',
-            content: 'Military-grade protection for your assets. Insurance-backed infrastructure, advanced fraud defense, and continuous monitoring keep your funds safe.',
+            content: 'Military-grade protection for your assets. Insurance-backed infrastructure, advanced fraud defense, and continuous monitoring keep your funds safe.',
         },
     ]
 
@@ -118,6 +118,7 @@ export default function Features() {
                 boxShadow: `${-angleY * 3}px ${angleX * 3}px 30px rgba(30, 74, 199, 0.2)`,
                 duration: 0.3,
                 ease: "power2.out"
+
             });
         };
 
@@ -165,23 +166,25 @@ export default function Features() {
                     <div style={{ transform: 'translateZ(30px)' }}>
                         <h3 className='text-[#1E4AC7] text-[24px] sm:text-[32px] lg:text-[42px] leading-[1.1] font-normal font-inter tracking-tight mb-4 transition-colors hover:text-[#264EB0] overflow-hidden'>
                             {title}
-                        </h3>
-                    </div>
+                        </h3 >
+                    </div >
                     <div style={{ transform: 'translateZ(20px)' }}>
                         <p className='text-base leading-relaxed  font-medium text-[#2851B2] font-inter'>
                             {content}
                         </p>
-                        {link && (
-                            <a
-                                href="#"
-                                className="text-[#1E4AC7]/60 text-[15px] underline mt-4 inline-block hover:text-[#1E4AC7] transition-colors font-inter"
-                            >
-                                {link}
-                            </a>
-                        )}
-                    </div>
-                </div>
-            </div>
+                        {
+                            link && (
+                                <a
+                                    href="#"
+                                    className="text-[#1E4AC7]/60 text-[15px] underline mt-4 inline-block hover:text-[#1E4AC7] transition-colors font-inter"
+                                >
+                                    {link}
+
+                                </a >
+                            )}
+                    </div >
+                </div >
+            </div >
         )
     }
 
@@ -205,20 +208,20 @@ export default function Features() {
                     fill
                     priority
                 />
-            </div>
+            </div >
 
             <div className='relative z-10 w-full mx-auto mt-[90px] px-[27px]'>
                 <div className='flex justify-center mb-16'>
                     <h2
                         ref={headingRef}
-                        className='font-normal text-[28px] xs:text-[32px] sm:text-[40px] md:text-[64px] lg:text-[64px] xl:text-[90px] leading-[1.1] font-semibold mb-6 font-inter text-white text-center tracking-tight'
+                        className='font-normal text-[40px] xs:text-[32px] sm:text-[40px] md:text-[64px] lg:text-[64px] xl:text-[90px] leading-[1.1] font- mb-6 font-inter text-white text-center tracking-tight'
                         style={{
                             textShadow: '0 0 20px rgba(255,255,255,0.3)',
                         }}
                     >
                         Why Wave Money?
-                    </h2>
-                </div>
+                    </h2 >
+                </div >
 
                 <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-end mt-10 pb-[8px]'>
                     {data.map((item, index) => (
@@ -231,8 +234,12 @@ export default function Features() {
                             className={`${index === 1 || index === 2 ? 'xl:mb-24' : ''} h-[420px]`}
                         />
                     ))}
-                </div>
-            </div>
-        </div>
+                </div >
+            </div >
+
+
+
+
+        </div >
     )
 }

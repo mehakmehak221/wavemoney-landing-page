@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import heroImg from '../../../public/assets/img/hero.jpg'
+import heroImg from '../../../public/assets/img/hero.png'
 import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
@@ -76,7 +76,6 @@ export default function Hero() {
                 <Image
                     src={heroImg}
                     alt="Hero Background"
-                    placeholder="blur"
                     fill
                     priority
                     quality={90}
@@ -85,24 +84,18 @@ export default function Hero() {
                 />
             </div>
 
-
-            <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-black/60 to-black/60 lg:from-black/40 lg:via-black/40 lg:to-transparent"></div>
-
+            <div className="absolute inset-0 z-[1] bg-black/40 lg:bg-black/20"></div>
 
             <div className="relative z-10 max-w-[1440px] w-full mx-auto h-full">
                 <div
                     className="
                         w-full
                         lg:w-[85%]
-                        px-5
-                        sm:px-10
-                        md:px-20
-                        lg:px-[86px]
+                        px-5 sm:px-10 md:px-20 lg:px-[86px]
                         flex
                         items-center
-                        min-h-screen
-                        pt-[80px]
-                        pb-[80px]
+                        min-h-[500px] md:min-h-[600px] lg:min-h-screen
+                        pt-[80px] pb-[80px]
                     "
                 >
                     <div
@@ -118,12 +111,10 @@ export default function Hero() {
                         "
                     >
                         <div ref={headingRef}>
-                            <h1 className="text-[28px] xs:text-[32px] sm:text-[43px] md:text-[53px] lg:text-[64px] font-medium leading-[1.2] md:leading-[1.1] font-sf-pro tracking-[-0.02em]">
+                            <h1 className="text-[28px] xs:text-[32px] sm:text-[36px] md:text-[43px] lg:text-[50px] font-medium leading-[1.2] md:leading-[1.3] font-sf-pro tracking-[-0.02em]">
                                 Use Crypto In Everyday Life.
                                 <br />
-                                Pay Bills, Book, Travel,
-                                <br />
-                                Spend Anywhere
+                                Pay Bills and Spend Anywhere
                             </h1>
                         </div>
 
@@ -136,7 +127,7 @@ export default function Hero() {
                         <div ref={buttonRef}>
                             <Link
                                 href="https://play.google.com/store/apps/details?id=com.onewave.money"
-                                className="inline-flex rounded-full sm:rounded-md bg-white text-[#484848] uppercase font-normal h-[48px] sm:h-[56px] lg:h-[64px] text-[14px] sm:text-[16px] lg:text-[24px] items-center justify-center px-8 sm:px-10 hover:bg-[#BBFF2A] hover:text-black hover:scale-105 transition-all duration-300 ease-in-out shadow-lg font-inter"
+                                className="inline-flex rounded-[12px] sm:rounded-[12px] bg-white text-[#484848] uppercase font-normal h-[48px] sm:h-[56px] lg:h-[64px] text-[14px] sm:text-[16px] lg:text-[24px] items-center justify-center px-8 sm:px-10 hover:bg-[#BBFF2A] hover:text-black hover:scale-105 transition-all duration-300 ease-in-out shadow-lg font-inter"
                             >
                                 JOIN NOW
                             </Link>

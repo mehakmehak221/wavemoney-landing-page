@@ -11,34 +11,35 @@ const CryptoSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
       },
     },
   }
 
-
   const fadeUp = {
-    hidden: { opacity: 0, y: 30, filter: 'blur(8px)' },
+    hidden: { opacity: 0, y: 40, filter: 'blur(10px)', skewY: 2 },
     visible: {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
+      skewY: 0,
       transition: {
         duration: 1.0,
-        ease: [0.22, 1, 0.36, 1] // Custom bezier for a very smooth "snap"
+        ease: [0.22, 1, 0.36, 1]
       },
     },
   }
 
   const imageEntry = {
-    hidden: { opacity: 0, x: 80, scale: 0.95 },
+    hidden: { opacity: 0, x: 80, scale: 0.8, rotate: 5 },
     visible: {
       opacity: 1,
       x: 0,
       scale: 1,
+      rotate: 0,
       transition: {
-        duration: 1.2,
+        duration: 1.4,
         ease: [0.22, 1, 0.36, 1],
         delay: 0.2
       },
@@ -46,9 +47,10 @@ const CryptoSection = () => {
   }
 
   const floatingAnimation = {
-    y: [0, -20, 0],
+    y: [0, -25, 0],
+    rotate: [-1, 1, -1],
     transition: {
-      duration: 5,
+      duration: 6,
       repeat: Infinity,
       ease: 'easeInOut',
     },
@@ -57,11 +59,11 @@ const CryptoSection = () => {
   return (
     <section
       id="crypto"
-      className="relative w-full bg-[#FFFFFF] py-32 overflow-hidden"
+      className="relative w-full bg-[#FFFEFB] overflow-hidden"
     >
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-[120px]">
+      <div className="max-w-[1440px] w-full mx-auto px-6 lg:px-[120px]">
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-20 mb-40">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           <motion.div
             className="w-full lg:w-[48%] text-black"
             variants={staggerContainer}
@@ -73,147 +75,42 @@ const CryptoSection = () => {
               variants={fadeUp}
               className="text-[#96C96A] text-sm md:text-base lg:text-lg font-bold mb-4 text-sf-pro"
             >
-              Global Payout
+              WaveMoney App
             </motion.p>
 
             <motion.h2
               variants={fadeUp}
-              className="text-[16px] xs:text-[20px] sm:text-[24px] md:text-[28px] lg:text-[50px]  leading-[1.1] font-semibold mb-6 font-inter"
+              className="text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[48px] leading-[1.2] font-semibold mb-6 font-inter"
             >
-              Send Crypto, Receive
+              Global Payouts
               <br />
-              Local Currency
+              Instant. Secure. Seamless
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className="text-[18px] md:text-[20px] leading-relaxed text-black/80 text-sf-pro max-w-[520px]"
             >
-              Experience hassle-free sending. Every transaction protected, every
-              recipient just moments away.
+              Send, receive, and manage value globally powered by crypto,
+              delivered as real money.
             </motion.p>
           </motion.div>
 
           <motion.div
-            className="w-full lg:w-[52%] flex justify-end"
+            className="w-full lg:w-[52%] flex justify-center lg:justify-end"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={imageEntry}
           >
-            <motion.div animate={floatingAnimation}>
+            <motion.div animate={floatingAnimation} className="w-full flex justify-center lg:justify-end">
               <Image
-                src="/assets/img/send-crypto.png"
-                alt="Send Crypto"
-                width={420}
-                height={820}
-                className="object-contain"
+                src="/assets/img/globalpayout.png"
+                alt="Global Payouts"
+                width={800}
+                height={600}
+                className="object-contain w-full h-auto max-w-[320px] sm:max-w-[480px] lg:max-w-full"
                 priority
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-
-
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-20 mb-40">
-          <motion.div
-            className="w-full lg:w-[48%] text-black"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-[#96C96A] text-sm md:text-base lg:text-lg font-bold mb-4 text-sf-pro"
-            >
-              Multi-Currency Wallet
-            </motion.p>
-
-            <motion.h2
-              variants={fadeUp}
-              className="text-[16px] xs:text-[20px] sm:text-[24px] md:text-[28px] lg:text-[50px]  leading-[1.1] font-semibold mb-6 font-inter"
-            >
-              Bridging Crypto and
-              <br />
-              Everyday Life
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-[18px] md:text-[20px] leading-relaxed text-black/80 text-sf-pro max-w-[520px]"
-            >
-              Crypto or Local Currency. Jump straight into action and access
-              your funds easily.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            className="w-full lg:w-[52%] flex justify-end"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={imageEntry}
-          >
-            <motion.div animate={floatingAnimation}>
-              <Image
-                src="/assets/img/bridging-crypto.png"
-                alt="Multi Currency Wallet"
-                width={420}
-                height={820}
-                className="object-contain"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-20">
-          <motion.div
-            className="w-full lg:w-[48%] text-black"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-[#96C96A] text-sm md:text-base lg:text-lg font-bold mb-4 text-sf-pro"
-            >
-              Swap
-            </motion.p>
-
-            <motion.h2
-              variants={fadeUp}
-              className="text-[16px] xs:text-[20px] sm:text-[24px] md:text-[28px] lg:text-[50px]  leading-[1.1] font-semibold mb-6 font-inter"
-            >
-              Swap Assets
-              <br />
-              Instantly
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-[18px] md:text-[20px] leading-relaxed text-black/80 text-sf-pro max-w-[520px]"
-            >
-              Convert your crypto in real time with transparent rates and zero
-              friction.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            className="w-full lg:w-[52%] flex justify-end"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={imageEntry}
-          >
-            <motion.div animate={floatingAnimation}>
-              <Image
-                src="/assets/img/crypto-swap.png"
-                alt="Crypto Credit"
-                width={420}
-                height={820}
-                className="object-contain"
               />
             </motion.div>
           </motion.div>
@@ -224,4 +121,3 @@ const CryptoSection = () => {
 }
 
 export default CryptoSection
-
