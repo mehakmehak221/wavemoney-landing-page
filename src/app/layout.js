@@ -92,14 +92,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/assets/img/favicon.ico" />
 
 
-        <title>Wave Money – Simple & Secure Crypto Services for Users</title>
+        <title>Wave Money – Simple & Secure Payment Services for Users</title>
         <meta name="description" content="Pay bills, book travel, earn with bots, and access AI services — all using crypto. Join millions using Wave Money, the all-in-one crypto utility app." />
 
 
         <meta name="keywords" content="Wave Money, crypto payments, pay bills with crypto, book flights with crypto, crypto utility app, Web3 payments, AI calling, crypto wallet, arbitrage bot, convert crypto to INR, crypto to fiat India" />
 
 
-        <meta property="og:title" content="Wave Money – Simple & Secure Crypto Services for Users" />
+        <meta property="og:title" content="Wave Money – Simple & Secure Payment Services for Users" />
         <meta property="og:description" content="A revolution in crypto payments. Pay bills, travel, and more using BTC, ETH, USDT, and other cryptocurrencies. Try Wave now." />
         <meta property="og:image" content="/og-image.png" />
         {/* <meta property="og:url" content="#" /> */}
@@ -107,7 +107,7 @@ export default function RootLayout({ children }) {
 
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Wave Money – Simple & Secure Crypto Services for Users" />
+        <meta name="twitter:title" content="Wave Money – Simple & Secure Payment Services for Users" />
         <meta name="twitter:description" content="Pay for bills, travel, AI services and more using crypto. Download Wave Money and experience the future of daily crypto use." />
         <meta name="twitter:image" content="/og-image.png" />
 
